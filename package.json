@@ -1,0 +1,19 @@
+{
+  "name": "303-test",
+  "version": "0.0.1",
+  "description": "303 software test",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simmsa/303-test.git"
+  },
+  "author": "Andrew Simms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simmsa/303-test/issues"
+  },
+  "homepage": "https://github.com/simmsa/303-test#readme"
+}
