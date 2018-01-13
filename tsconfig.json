@@ -1,0 +1,15 @@
+{
+    "compilerOptions":{
+        "target": "es5",
+        "rootDir": "src",
+        "outDir": "build",
+        "jsx": "react",
+        "module": "commonjs",
+        "skipLibCheck": true,
+        "strict": true,
+        "lib": ["ES6", "dom"]
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
