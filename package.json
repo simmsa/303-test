@@ -4,7 +4,8 @@
   "description": "303 software test",
   "main": "index.html",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "webpack": "webpack --config src/webpack.config.ts"
   },
   "repository": {
     "type": "git",
