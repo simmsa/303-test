@@ -1,6 +1,6 @@
 # Installation
 
-Run `git pull https://github.com/simmsa/303-test`
+Run `git clone https://github.com/simmsa/303-test.git`
 
 # Usage
 
