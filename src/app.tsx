@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import "whatwg-fetch";
+import 'whatwg-fetch';
 
 interface Person {
   birth_year: string;
@@ -30,12 +30,12 @@ class App extends React.Component<{}, AppState> {
   }
 
   private fetchData() {
-    const url = "https://swapi.co/api/people/?format=json";
+    const url = 'https://swapi.co/api/people/?format=json';
     fetch(url)
-      .then(response => {
+      .then((response) => {
         return response.json();
       })
-      .then(json => {
+      .then((json) => {
         this.setState({
           isLoading: false,
           data: this.parseData(json),
@@ -55,28 +55,27 @@ class App extends React.Component<{}, AppState> {
   public render() {
     if (this.state.isLoading) {
       return <div>Loading...</div>;
-    } else {
-      return (
-        <ul>
-          {this.state.data.map(person => {
-            return (
-              <li key={person.name}>
-                {person.name}
-                <ul>
-                  <li>Born: {person.birth_year}</li>
-                  <li>Gender: {person.gender}</li>
-                  <li>Mass: {person.mass}</li>
-                  <li>Height: {person.height}</li>
-                  <li>Skin Color: {person.skin_color}</li>
-                  <li>Eye Color: {person.eye_color}</li>
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      );
     }
+    return (
+      <ul>
+        {this.state.data.map((person) => {
+          return (
+            <li key={person.name}>
+              {person.name}
+              <ul>
+                <li>Born: {person.birth_year}</li>
+                <li>Gender: {person.gender}</li>
+                <li>Mass: {person.mass}</li>
+                <li>Height: {person.height}</li>
+                <li>Skin Color: {person.skin_color}</li>
+                <li>Eye Color: {person.eye_color}</li>
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
+    );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("reactContainer"));
+ReactDOM.render(<App />, document.getElementById('reactContainer'));
