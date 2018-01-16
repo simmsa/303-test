@@ -966,13 +966,12 @@ var App = /** @class */ (function (_super) {
     }
     App.prototype.fetchData = function () {
         var _this = this;
-        var url = "https://swapi.co/api/people/?format=json";
+        var url = 'https://swapi.co/api/people/?format=json';
         fetch(url)
             .then(function (response) {
             return response.json();
         })
             .then(function (json) {
-            console.log(json);
             _this.setState({
                 isLoading: false,
                 data: _this.parseData(json),
@@ -990,35 +989,33 @@ var App = /** @class */ (function (_super) {
         if (this.state.isLoading) {
             return React.createElement("div", null, "Loading...");
         }
-        else {
-            return (React.createElement("ul", null, this.state.data.map(function (person) {
-                return (React.createElement("li", { key: person.name },
-                    person.name,
-                    React.createElement("ul", null,
-                        React.createElement("li", null,
-                            "Born: ",
-                            person.birth_year),
-                        React.createElement("li", null,
-                            "Gender: ",
-                            person.gender),
-                        React.createElement("li", null,
-                            "Mass: ",
-                            person.mass),
-                        React.createElement("li", null,
-                            "Height: ",
-                            person.height),
-                        React.createElement("li", null,
-                            "Skin Color: ",
-                            person.skin_color),
-                        React.createElement("li", null,
-                            "Eye Color: ",
-                            person.eye_color))));
-            })));
-        }
+        return (React.createElement("ul", null, this.state.data.map(function (person) {
+            return (React.createElement("li", { key: person.name },
+                person.name,
+                React.createElement("ul", null,
+                    React.createElement("li", null,
+                        "Born: ",
+                        person.birth_year),
+                    React.createElement("li", null,
+                        "Gender: ",
+                        person.gender),
+                    React.createElement("li", null,
+                        "Mass: ",
+                        person.mass),
+                    React.createElement("li", null,
+                        "Height: ",
+                        person.height),
+                    React.createElement("li", null,
+                        "Skin Color: ",
+                        person.skin_color),
+                    React.createElement("li", null,
+                        "Eye Color: ",
+                        person.eye_color))));
+        })));
     };
     return App;
 }(React.Component));
-ReactDOM.render(React.createElement(App, null), document.getElementById("reactContainer"));
+ReactDOM.render(React.createElement(App, null), document.getElementById('reactContainer'));
 
 
 /***/ }),
